@@ -1,0 +1,45 @@
+<div class="container">
+  <h2>Office Temp: {{glanThermo.feeds[0].field1}}</h2>
+  <p> </p>
+<!--
+<div class="btn-group" ng-if='!inRoom'>
+<button class="btn btn-success disabled" ng-click="">Cool</button>
+<button class="btn btn-info" ng-click="changePresence(1)">In Room</button>
+<button class="btn btn-danger disabled" ng-click="">Warm</button>
+</div>
+-->
+<div class="btn-group">
+<button class="btn btn-info" ng-click="changePresence(1)">In Room</button>
+<button class="btn btn-info" ng-click="changePresence(0)">Leave Room</button>
+</div>
+<p> </p>
+<div class="btn-group">
+<button class="btn btn-info" ng-click="changeSetTemp(17)">17</button>
+<button class="btn btn-info" ng-click="changeSetTemp(18)">18</button>
+<button class="btn btn-info" ng-click="changeSetTemp(19)">19</button>
+<button class="btn btn-info" ng-click="changeSetTemp(20)">20</button>
+<button class="btn btn-info" ng-click="changeSetTemp(21)">21</button>
+
+</div>
+
+
+<!--
+<div>
+  <button class="btn" ng-click="refreshTempData()">Refresh </button>
+</div>
+-->
+  <p>CurrentTemp: {{glanThermo.feeds[0].field1}}</p>
+
+  <p>Set Temp: {{glanThermo.feeds[0].field2}}</p>
+<!--
+  <button class="btn btn-success" ng-click="changeSetTemp(0)">ECO (12 &deg;C)</button>
+  <button class="btn btn-warning" ng-click="changeSetTemp(1)">COMFORT (19 &deg;C)</button>
+  -->
+  <br>
+  
+  <p>Status: {{statusMessage}}</p>
+<!--
+  <pre> {{ statusDetail | json }}</pre>
+  <pre> {{ glanThermo.feeds | json }}</pre>
+	-->
+</div>
