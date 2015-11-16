@@ -1,4 +1,24 @@
+
+<div class="container">
+	<p>Mains Water count: {{glanWater1.litres}} </p>
+	<p> </p>
+	<p> Rain Water Count {{glanWater2.litres}} </p>
+	<div class="btn-group">
+		<button class="btn btn-primary" ng-click="getCounts()">Refresh</button>
+
+		<button class="btn btn-primary" ng-click="resetCount()">Reset Count</button>
+	</div>
+	<p>{{errMessage}}</p>
+	<p>Charts</p>
+	<p>Mains <br/></p>
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="http://api.thingspeak.com/channels/22096/charts/1?width=450&height=260&&yaxismax=550&yaxismin=0&sum=daily&days=30&dynamic=true&type=column&yaxis=Litres&xaxis=Date&title=Mains%20Water&api_key=FFOLG2OKFJB4TWCH" ></iframe>
+	<p>Rain <br /></p>
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="http://api.thingspeak.com/channels/22096/charts/2?width=450&height=260&&yaxismax=550&yaxismin=0&sum=daily&days=30&dynamic=true&type=column&yaxis=Litres&xaxis=Date&title=Rain%20Water&api_key=FFOLG2OKFJB4TWCH" ></iframe>
+</div>
+
+<!-- 
 <p><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="http://api.thingspeak.com/channels/22096/charts/1?width=450&height=260&sum=1440&results=30&dynamic=true&type=column&api_key=FFOLG2OKFJB4TWCH " ></iframe></p>
 <p><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="http://api.thingspeak.com/channels/22096/charts/2?width=450&height=260&sum=1440&results=30&dynamic=true&type=column&api_key=FFOLG2OKFJB4TWCH " ></iframe></p>
 <p>
 <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="http://api.thingspeak.com/channels/22096/charts/3?width=450&height=260&sum=1440&results=30&dynamic=true&type=column&api_key=FFOLG2OKFJB4TWCH " ></iframe></p>
+ -->

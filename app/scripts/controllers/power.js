@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name cwudumApp.controller:AboutCtrl
+ * @name cwudumApp.controller:PowerCtrl
  * @description
- * # AboutCtrl
+ * # PowerCtrl
  * Controller of the cwudumApp
  */
 angular.module('cwudumApp')
-  .controller('AboutCtrl', function ($scope) {
+  .controller('PowerCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

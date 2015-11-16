@@ -1,0 +1,64 @@
+
+<div class="panel" ng-class="{'panel-danger': +WaterTemp > 46, 'panel-warning': +WaterTemp < 46 && +WaterTemp > 41, 'panel-info': +WaterTemp < 41}">
+	<div class="panel-heading">
+		<a ng-href="#solar">
+			<h3 class="panel-title">Hot Water</h3>
+		</a>
+	</div>
+	<div class="panel-body">
+		Water Temp: {{WaterTemp}} &deg;C <button class="btn btn-danger pull-right disabled" ng-click="toDo()">Boost</button>
+	</div>
+</div>
+<div class="panel" ng-class="{'panel-danger': +OfficeTemp > 21, 'panel-warning': +OfficeTemp < 21 && +OfficeTemp > 16.5, 'panel-info': +OfficeTemp < 16.5}">
+	<div class="panel-heading">
+		<a ng-href="#office">
+			<h3 class="panel-title">Office Temp</h3>
+		</a>
+	</div>
+	<div class="panel-body">
+		Office Temp: {{OfficeTemp}} &deg;C <button ng-controller="MainCtrl" class="btn btn-danger pull-right" ng-class="{'disabled' : +OfficeTemp > 19}" ng-click="changeSetTemp(19)">Heat 19</button>
+		<br />Set Temp: {{SetTemp}} &deg;C
+	</div>
+</div>
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h3 class="panel-title">Last 24 Hours</h3>
+	</div>
+	<div class="panel-body">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-6">
+						Water
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						Mains: {{MainsWater}} Litres
+					</div>
+					<div class="col-xs-6">
+						Rain: {{RainWater}} Litres
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-6">
+						Power
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						House: {{HousePower}} kWHr
+					</div>
+					<div class="col-xs-6">
+						Office: {{OfficePower}} kWHr
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

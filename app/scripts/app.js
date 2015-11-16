@@ -20,12 +20,12 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
+        templateUrl: 'views/simpleview.html',
+        controller: 'SimpleviewCtrl'
+      })
+      .when('/office', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
       })
       .when('/water', {
         templateUrl: 'views/water.html',
@@ -34,6 +34,14 @@ angular
       .when('/solar', {
         templateUrl: 'views/solar.html',
         controller: 'SolarCtrl'
+      })
+      .when('/power', {
+        templateUrl: 'views/power.html',
+        controller: 'PowerCtrl'
+      })
+      .when('/simpleView', {
+        templateUrl: 'views/simpleview.html',
+        controller: 'SimpleviewCtrl'
       })
       .otherwise({
         redirectTo: '/'
